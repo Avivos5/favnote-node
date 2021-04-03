@@ -26,7 +26,7 @@ const note = {
   },
   getAllNotes: (req, res) => {
     console.log(req);
-    Note.find({userID: req.query.userID})
+    Note.find({userID: req.body.userID})
       .then((results) => res.send(results))
       .catch((err) => console.log(err));
   },
